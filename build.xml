@@ -7,7 +7,7 @@
 	<property name="jar" location="${build}/jar" />
 	<property name="doc" location="doc" />
 	<property name="libs" location="libs" />
-  <!--><property name="main-class" value="peersim.Simulator" />-->
+    <property name="main-class" value="org.nullable.mina.subscribe.SubscribeIoHandlerAdapter" />
 
 	<!-- Packages to be included in the Javadoc generation -->
 	<property name="packages" value="org.nullable.mina.subscribe.*"/>
@@ -36,15 +36,15 @@
     </jar>
   </target>
 
-  <!--<target name="run" depends="jar">
+  <target name="run" depends="package">
     <java fork="true" classname="${main-class}">
       <classpath>
         <path refid="compile.path"/>
-        <path location="${jar}/dips.jar"/>
+        <path location="${jar}/mina-subscribe.jar"/>
       </classpath>
-      <arg line="simulations/average.sim"/>
+      <!--<arg line="simulations/average.sim"/>-->
     </java>
-  </target>-->
+  </target>
 
 	<target name="doc">
 		<!-- Create the doc directory structure used by javadoc -->
