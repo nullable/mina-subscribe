@@ -73,6 +73,7 @@ public abstract class SubscribeIoHandlerAdapter extends IoHandlerAdapter {
     public static void main(String[] args) throws Exception {
 		SubscribeIoHandlerAdapter sioha = new SubscribeIoHandlerAdapter() {
 			
+			@SuppressWarnings("unused")
 			public void comReceived(IoSession session, A com) throws Exception{
 				System.out.println("(A) Received: " + com +" | class: " + com.getClass());
 			}
